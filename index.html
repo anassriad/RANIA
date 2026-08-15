@@ -6,11 +6,18 @@
 
     <title>Rania Ababssi | Architect</title>
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
     <style>
+
+        /* =========================================
+           RESET
+        ========================================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -28,14 +35,16 @@
             line-height: 1.6;
         }
 
-        /* =========================
+
+        /* =========================================
            NAVIGATION
-        ========================= */
+        ========================================= */
 
         .navbar {
             position: fixed;
             top: 0;
             left: 0;
+
             width: 100%;
             height: 78px;
 
@@ -45,46 +54,60 @@
 
             padding: 0 7%;
 
-            background: rgba(247, 245, 240, 0.94);
+            background: rgba(247, 245, 240, 0.95);
+
             backdrop-filter: blur(12px);
 
-            border-bottom: 1px solid rgba(0,0,0,0.08);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 
             z-index: 1000;
         }
 
+
         .logo {
             font-family: "Playfair Display", serif;
+
             font-size: 25px;
             font-weight: 600;
+
             letter-spacing: 1px;
+
+            color: #252525;
         }
+
 
         .nav-links {
             display: flex;
+
             gap: 40px;
+
             list-style: none;
         }
+
 
         .nav-links a {
             position: relative;
 
             text-decoration: none;
+
             color: #333;
 
             font-size: 14px;
             font-weight: 500;
 
             letter-spacing: 1px;
+
             text-transform: uppercase;
 
             transition: 0.3s ease;
         }
 
+
         .nav-links a::after {
             content: "";
 
             position: absolute;
+
             left: 0;
             bottom: -7px;
 
@@ -96,24 +119,30 @@
             transition: 0.3s ease;
         }
 
+
         .nav-links a:hover::after,
         .nav-links a.active::after {
             width: 100%;
         }
+
 
         .nav-links a:hover,
         .nav-links a.active {
             color: #8b7355;
         }
 
-        /* =========================
+
+
+        /* =========================================
            HERO
-        ========================= */
+        ========================================= */
 
         .hero {
+
             min-height: 100vh;
 
             display: grid;
+
             grid-template-columns: 1.1fr 0.9fr;
 
             align-items: center;
@@ -123,23 +152,30 @@
             padding: 130px 9% 80px;
         }
 
+
         .hero-text {
             max-width: 700px;
         }
 
+
         .small-title {
+
             color: #8b7355;
 
             font-size: 13px;
+
             font-weight: 600;
 
             letter-spacing: 4px;
+
             text-transform: uppercase;
 
             margin-bottom: 20px;
         }
 
+
         .hero h1 {
+
             font-family: "Playfair Display", serif;
 
             font-size: clamp(55px, 7vw, 95px);
@@ -151,12 +187,16 @@
             margin-bottom: 25px;
         }
 
+
         .hero h1 span {
             color: #8b7355;
         }
 
+
         .hero-title {
+
             font-size: 21px;
+
             font-weight: 500;
 
             margin-bottom: 25px;
@@ -164,7 +204,9 @@
             color: #555;
         }
 
+
         .hero-description {
+
             max-width: 620px;
 
             font-size: 17px;
@@ -174,13 +216,19 @@
             margin-bottom: 35px;
         }
 
+
         .hero-buttons {
+
             display: flex;
+
             gap: 15px;
+
             flex-wrap: wrap;
         }
 
+
         .button {
+
             display: inline-block;
 
             padding: 13px 25px;
@@ -190,6 +238,7 @@
             text-decoration: none;
 
             font-size: 13px;
+
             font-weight: 600;
 
             letter-spacing: 1px;
@@ -197,39 +246,58 @@
             transition: 0.3s ease;
         }
 
+
         .button.primary {
+
             background: #8b7355;
+
             color: white;
         }
 
+
         .button.primary:hover {
+
             background: #6e5a43;
+
             border-color: #6e5a43;
         }
 
+
         .button.secondary {
+
             color: #8b7355;
+
             background: transparent;
         }
 
+
         .button.secondary:hover {
+
             background: #8b7355;
+
             color: white;
         }
 
-        /* =========================
-           PHOTO
-        ========================= */
+
+
+        /* =========================================
+           HERO PHOTO
+        ========================================= */
 
         .hero-photo {
+
             position: relative;
 
             display: flex;
+
             justify-content: center;
         }
 
+
         .photo-frame {
+
             width: min(430px, 100%);
+
             aspect-ratio: 0.78;
 
             position: relative;
@@ -239,7 +307,9 @@
             overflow: hidden;
         }
 
+
         .photo-frame::before {
+
             content: "";
 
             position: absolute;
@@ -253,8 +323,11 @@
             pointer-events: none;
         }
 
+
         .photo-frame img {
+
             width: 100%;
+
             height: 100%;
 
             object-fit: cover;
@@ -262,46 +335,36 @@
             display: block;
         }
 
-        .photo-placeholder {
-            width: 100%;
-            height: 100%;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
 
-            background: #dedbd4;
-
-            color: #777;
-
-            text-align: center;
-
-            padding: 30px;
-
-            font-size: 14px;
-        }
-
-        /* =========================
-           ABOUT
-        ========================= */
+        /* =========================================
+           GENERAL SECTIONS
+        ========================================= */
 
         section {
+
             padding: 110px 9%;
         }
 
+
         .section-label {
+
             color: #8b7355;
 
             font-size: 12px;
+
             font-weight: 600;
 
             letter-spacing: 4px;
+
             text-transform: uppercase;
 
             margin-bottom: 15px;
         }
 
+
         .section-title {
+
             font-family: "Playfair Display", serif;
 
             font-size: clamp(38px, 5vw, 58px);
@@ -311,15 +374,26 @@
             margin-bottom: 35px;
         }
 
+
+
+        /* =========================================
+           ABOUT
+        ========================================= */
+
         .about {
+
             background: #ebe8e1;
         }
 
+
         .about-content {
+
             max-width: 900px;
         }
 
+
         .about-content p {
+
             font-size: 19px;
 
             color: #555;
@@ -327,11 +401,14 @@
             margin-bottom: 20px;
         }
 
-        /* =========================
+
+
+        /* =========================================
            EDUCATION
-        ========================= */
+        ========================================= */
 
         .education-grid {
+
             display: grid;
 
             grid-template-columns: repeat(2, 1fr);
@@ -339,7 +416,9 @@
             gap: 25px;
         }
 
+
         .education-card {
+
             padding: 35px;
 
             border: 1px solid #ddd8cf;
@@ -349,13 +428,17 @@
             transition: 0.3s ease;
         }
 
+
         .education-card:hover {
+
             transform: translateY(-5px);
 
             border-color: #8b7355;
         }
 
+
         .education-year {
+
             color: #8b7355;
 
             font-size: 13px;
@@ -365,7 +448,9 @@
             margin-bottom: 12px;
         }
 
+
         .education-card h3 {
+
             font-family: "Playfair Display", serif;
 
             font-size: 25px;
@@ -373,24 +458,42 @@
             margin-bottom: 10px;
         }
 
+
         .education-card p {
+
             color: #666;
+
+            margin-bottom: 5px;
         }
 
-        /* =========================
+
+
+        /* =========================================
            EXPERIENCE
-        ========================= */
+        ========================================= */
 
         .experience {
+
             background: #252525;
+
             color: white;
         }
 
+
         .experience .section-label {
+
             color: #b59a76;
         }
 
+
+        .experience .section-title {
+
+            color: white;
+        }
+
+
         .experience-grid {
+
             display: grid;
 
             grid-template-columns: repeat(2, 1fr);
@@ -398,7 +501,9 @@
             gap: 25px;
         }
 
+
         .experience-card {
+
             padding: 35px;
 
             border: 1px solid rgba(255,255,255,0.15);
@@ -406,11 +511,15 @@
             transition: 0.3s ease;
         }
 
+
         .experience-card:hover {
+
             border-color: #b59a76;
         }
 
+
         .experience-date {
+
             color: #b59a76;
 
             font-size: 13px;
@@ -420,7 +529,9 @@
             margin-bottom: 12px;
         }
 
+
         .experience-card h3 {
+
             font-family: "Playfair Display", serif;
 
             font-size: 26px;
@@ -428,7 +539,9 @@
             margin-bottom: 8px;
         }
 
+
         .experience-card h4 {
+
             color: #bbb;
 
             font-size: 14px;
@@ -438,19 +551,26 @@
             margin-bottom: 15px;
         }
 
+
         .experience-card p {
+
             color: #ccc;
         }
 
-        /* =========================
+
+
+        /* =========================================
            SKILLS
-        ========================= */
+        ========================================= */
 
         .skills {
+
             background: #f7f5f0;
         }
 
+
         .skills-grid {
+
             display: grid;
 
             grid-template-columns: repeat(2, 1fr);
@@ -458,7 +578,9 @@
             gap: 25px;
         }
 
+
         .skill-category {
+
             padding: 30px;
 
             background: white;
@@ -466,7 +588,9 @@
             border: 1px solid #e2ded6;
         }
 
+
         .skill-category h3 {
+
             font-family: "Playfair Display", serif;
 
             font-size: 24px;
@@ -474,7 +598,9 @@
             margin-bottom: 20px;
         }
 
+
         .skill-list {
+
             display: flex;
 
             flex-wrap: wrap;
@@ -482,7 +608,9 @@
             gap: 10px;
         }
 
+
         .skill {
+
             padding: 8px 13px;
 
             background: #eeeae2;
@@ -492,15 +620,20 @@
             font-size: 13px;
         }
 
-        /* =========================
+
+
+        /* =========================================
            LANGUAGES
-        ========================= */
+        ========================================= */
 
         .languages {
+
             background: #ebe8e1;
         }
 
+
         .language-grid {
+
             display: grid;
 
             grid-template-columns: repeat(4, 1fr);
@@ -508,7 +641,9 @@
             gap: 15px;
         }
 
+
         .language {
+
             background: white;
 
             padding: 25px;
@@ -518,7 +653,9 @@
             border: 1px solid #ddd8cf;
         }
 
+
         .language strong {
+
             display: block;
 
             font-family: "Playfair Display", serif;
@@ -528,27 +665,36 @@
             margin-bottom: 5px;
         }
 
+
         .language span {
+
             font-size: 13px;
 
             color: #777;
         }
 
-        /* =========================
+
+
+        /* =========================================
            RESEARCH
-        ========================= */
+        ========================================= */
 
         .research-list {
+
             max-width: 1000px;
         }
 
+
         .research-item {
+
             padding: 25px 0;
 
             border-bottom: 1px solid #ddd8cf;
         }
 
+
         .research-item h3 {
+
             font-family: "Playfair Display", serif;
 
             font-size: 22px;
@@ -556,21 +702,28 @@
             margin-bottom: 8px;
         }
 
+
         .research-item p {
+
             color: #666;
         }
 
-        /* =========================
+
+
+        /* =========================================
            CONTACT
-        ========================= */
+        ========================================= */
 
         .contact {
+
             text-align: center;
 
             background: #ebe8e1;
         }
 
+
         .contact-info {
+
             margin-top: 25px;
 
             display: flex;
@@ -582,7 +735,9 @@
             gap: 20px;
         }
 
+
         .contact-info a {
+
             color: #555;
 
             text-decoration: none;
@@ -592,11 +747,14 @@
             padding-bottom: 3px;
         }
 
-        /* =========================
+
+
+        /* =========================================
            FOOTER
-        ========================= */
+        ========================================= */
 
         footer {
+
             padding: 30px 9%;
 
             background: #252525;
@@ -608,25 +766,34 @@
             font-size: 13px;
         }
 
-        /* =========================
-           MOBILE
-        ========================= */
+
+
+        /* =========================================
+           TABLET
+        ========================================= */
 
         @media (max-width: 850px) {
 
             .navbar {
+
                 padding: 0 5%;
             }
 
+
             .nav-links {
+
                 gap: 15px;
             }
 
+
             .nav-links a {
+
                 font-size: 11px;
             }
 
+
             .hero {
+
                 grid-template-columns: 1fr;
 
                 padding: 130px 7% 70px;
@@ -634,63 +801,95 @@
                 gap: 50px;
             }
 
+
             .hero-text {
+
                 order: 1;
             }
 
+
             .hero-photo {
+
                 order: 2;
             }
 
+
             section {
+
                 padding: 80px 7%;
             }
+
 
             .education-grid,
             .experience-grid,
             .skills-grid {
+
                 grid-template-columns: 1fr;
             }
 
+
             .language-grid {
+
                 grid-template-columns: repeat(2, 1fr);
             }
+
         }
+
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
 
         @media (max-width: 500px) {
 
             .logo {
+
                 font-size: 18px;
             }
 
+
             .nav-links {
+
                 gap: 10px;
             }
 
+
             .nav-links a {
+
                 font-size: 9px;
             }
 
+
             .hero h1 {
+
                 font-size: 55px;
             }
 
+
             .hero-description {
+
                 font-size: 16px;
             }
 
+
             .language-grid {
+
                 grid-template-columns: 1fr 1fr;
             }
+
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- =========================
+
+    <!-- =========================================
          NAVIGATION
-    ========================== -->
+    ========================================== -->
 
     <header class="navbar">
 
@@ -698,7 +897,9 @@
             RANIA ABABSSI
         </div>
 
+
         <nav>
+
             <ul class="nav-links">
 
                 <li>
@@ -707,11 +908,13 @@
                     </a>
                 </li>
 
+
                 <li>
                     <a href="elevator-pitch.html">
                         Elevator Pitch
                     </a>
                 </li>
+
 
                 <li>
                     <a href="portfolio.html">
@@ -720,18 +923,26 @@
                 </li>
 
             </ul>
+
         </nav>
 
     </header>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
 
     <main>
 
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
         <section class="hero">
+
 
             <div class="hero-text">
 
@@ -739,27 +950,34 @@
                     Architect · Researcher · Educator
                 </div>
 
+
                 <h1>
                     Rania<br>
                     <span>Ababssi</span>
                 </h1>
 
+
                 <div class="hero-title">
                     Architect with a background in topographic engineering
                 </div>
 
+
                 <p class="hero-description">
-                    Architecture graduate from Universitas Islam Indonesia and
-                    Future Global Leaders Scholarship recipient, with a multidisciplinary
-                    background combining architecture, spatial analysis, research,
-                    simulation, and contextual design.
+
+                    Architecture graduate from Universitas Islam Indonesia
+                    and Future Global Leaders Scholarship recipient, with a
+                    multidisciplinary background combining architecture,
+                    spatial analysis, research, simulation, and contextual design.
+
                 </p>
+
 
                 <div class="hero-buttons">
 
                     <a href="#about" class="button primary">
                         Discover My Story
                     </a>
+
 
                     <a href="portfolio.html" class="button secondary">
                         View Portfolio
@@ -770,70 +988,74 @@
             </div>
 
 
+
+            <!-- PHOTO -->
+
             <div class="hero-photo">
 
                 <div class="photo-frame">
 
-                    <!--
-                    Replace this with Rania's photo.
-
-                    Example:
-                    <img src="images/rania.jpg" alt="Rania Ababssi">
-                    -->
-
-                    <div class="photo-placeholder">
-                        <span>
-                            Add Rania's professional photo here
-                        </span>
-                    </div>
+                    <img
+                        src="images/rania.png"
+                        alt="Rania Ababssi"
+                    >
 
                 </div>
 
             </div>
 
+
         </section>
 
 
-        <!-- =========================
+
+        <!-- =====================================
              ABOUT
-        ========================== -->
+        ====================================== -->
 
         <section class="about" id="about">
+
 
             <div class="section-label">
                 01 — About
             </div>
 
+
             <h2 class="section-title">
                 A multidisciplinary journey
             </h2>
 
+
             <div class="about-content">
 
                 <p>
-                    I am an architect with a multidisciplinary background that
-                    combines architectural design, topographic engineering,
-                    spatial analysis, research, and teaching.
+                    I am an architect with a multidisciplinary background
+                    that combines architectural design, topographic
+                    engineering, spatial analysis, research, and teaching.
                 </p>
+
 
                 <p>
                     My academic journey began with training in topographic
-                    engineering, which gave me a strong foundation in spatial
-                    analysis and technical understanding before I specialized
-                    in architecture.
+                    engineering, which gave me a strong foundation in
+                    spatial analysis and technical understanding before
+                    I specialized in architecture.
                 </p>
 
-                <p>
-                    During my architectural studies at Universitas Islam Indonesia,
-                    I developed a strong interest in contextual design,
-                    environmental performance, simulation, and architectural
-                    research.
-                </p>
 
                 <p>
-                    I also worked as an architecture teaching assistant, where
-                    I supported students in their research, scientific writing,
-                    and architectural simulation workshops.
+                    During my architectural studies at Universitas Islam
+                    Indonesia, I developed a strong interest in contextual
+                    design, environmental performance, simulation, and
+                    architectural research.
+                </p>
+
+
+                <p>
+                    I also worked as an architecture teaching assistant,
+                    where I supported students in their research,
+                    scientific writing, and architectural simulation
+                    workshops.
                 </p>
 
             </div>
@@ -841,21 +1063,26 @@
         </section>
 
 
-        <!-- =========================
+
+        <!-- =====================================
              EDUCATION
-        ========================== -->
+        ====================================== -->
 
         <section>
+
 
             <div class="section-label">
                 02 — Education
             </div>
 
+
             <h2 class="section-title">
                 Academic background
             </h2>
 
+
             <div class="education-grid">
+
 
                 <article class="education-card">
 
@@ -863,17 +1090,21 @@
                         2021 — 2025
                     </div>
 
+
                     <h3>
                         Bachelor of Architecture
                     </h3>
+
 
                     <p>
                         Universitas Islam Indonesia
                     </p>
 
+
                     <p>
                         GPA: 3.90 / 4.00 · 144 credits
                     </p>
+
 
                     <p>
                         Graduated Cum Laude / Mention Très Bien
@@ -882,19 +1113,23 @@
                 </article>
 
 
+
                 <article class="education-card">
 
                     <div class="education-year">
                         Technical Education
                     </div>
 
+
                     <h3>
                         Topographic Engineering
                     </h3>
 
+
                     <p>
                         Institut des Mines de Touissit
                     </p>
+
 
                     <p>
                         Diplôme de Technicien Spécialisé en Génie Topographique
@@ -903,19 +1138,23 @@
                 </article>
 
 
+
                 <article class="education-card">
 
                     <div class="education-year">
                         2013 — 2016
                     </div>
 
+
                     <h3>
                         Baccalauréat
                     </h3>
 
+
                     <p>
                         Sciences Physiques et Chimie
                     </p>
+
 
                     <p>
                         Lycée Ibn Rochd
@@ -924,19 +1163,23 @@
                 </article>
 
 
+
                 <article class="education-card">
 
                     <div class="education-year">
                         2026
                     </div>
 
+
                     <h3>
                         Revit Training
                     </h3>
 
+
                     <p>
                         Centre BIM Skills Rabat
                     </p>
+
 
                     <p>
                         Architecture, structure and infrastructure
@@ -944,26 +1187,32 @@
 
                 </article>
 
+
             </div>
 
         </section>
 
 
-        <!-- =========================
+
+        <!-- =====================================
              EXPERIENCE
-        ========================== -->
+        ====================================== -->
 
         <section class="experience">
+
 
             <div class="section-label">
                 03 — Experience
             </div>
 
+
             <h2 class="section-title">
                 Professional experience
             </h2>
 
+
             <div class="experience-grid">
+
 
                 <article class="experience-card">
 
@@ -971,14 +1220,17 @@
                         25 FEB 2025 — 15 AUG 2025
                     </div>
 
+
                     <h3>
                         Architecture Teaching Assistant
                     </h3>
+
 
                     <h4>
                         Department of Architecture, FTSP —
                         Universitas Islam Indonesia
                     </h4>
+
 
                     <p>
                         Assisted with Building Performance Evaluation &
@@ -990,19 +1242,23 @@
                 </article>
 
 
+
                 <article class="experience-card">
 
                     <div class="experience-date">
                         2020
                     </div>
 
+
                     <h3>
                         Topography Technician
                     </h3>
 
+
                     <h4>
                         Leader Topo Kassimi — Rabat
                     </h4>
+
 
                     <p>
                         Worked on cadastral plans and control procedures,
@@ -1013,19 +1269,23 @@
                 </article>
 
 
+
                 <article class="experience-card">
 
                     <div class="experience-date">
                         2019 — 2020
                     </div>
 
+
                     <h3>
                         Topography Intern
                     </h3>
 
+
                     <h4>
                         SGTM / Cabinet Ahmed Nana
                     </h4>
+
 
                     <p>
                         Worked on construction-related plans, AutoCAD,
@@ -1036,19 +1296,23 @@
                 </article>
 
 
+
                 <article class="experience-card">
 
                     <div class="experience-date">
                         2018
                     </div>
 
+
                     <h3>
                         Topography Intern
                     </h3>
 
+
                     <h4>
                         ANCFCC
                     </h4>
+
 
                     <p>
                         Gained experience in cadastral, land surveying,
@@ -1057,26 +1321,32 @@
 
                 </article>
 
+
             </div>
 
         </section>
 
 
-        <!-- =========================
+
+        <!-- =====================================
              SKILLS
-        ========================== -->
+        ====================================== -->
 
         <section class="skills">
+
 
             <div class="section-label">
                 04 — Skills
             </div>
 
+
             <h2 class="section-title">
                 Technical toolkit
             </h2>
 
+
             <div class="skills-grid">
+
 
                 <div class="skill-category">
 
@@ -1084,14 +1354,21 @@
                         Architecture & Design
                     </h3>
 
+
                     <div class="skill-list">
 
-                        <span class="skill">Archicad</span>
-                        <span class="skill">SketchUp</span>
+                        <span class="skill">
+                            Archicad
+                        </span>
+
+                        <span class="skill">
+                            SketchUp
+                        </span>
 
                     </div>
 
                 </div>
+
 
 
                 <div class="skill-category">
@@ -1100,15 +1377,25 @@
                         Rendering
                     </h3>
 
+
                     <div class="skill-list">
 
-                        <span class="skill">Lumion</span>
-                        <span class="skill">Twinmotion</span>
-                        <span class="skill">Enscape</span>
+                        <span class="skill">
+                            Lumion
+                        </span>
+
+                        <span class="skill">
+                            Twinmotion
+                        </span>
+
+                        <span class="skill">
+                            Enscape
+                        </span>
 
                     </div>
 
                 </div>
+
 
 
                 <div class="skill-category">
@@ -1116,6 +1403,7 @@
                     <h3>
                         Simulation
                     </h3>
+
 
                     <div class="skill-list">
 
@@ -1137,47 +1425,68 @@
                 </div>
 
 
+
                 <div class="skill-category">
 
                     <h3>
                         CAD, GIS & Graphic Design
                     </h3>
 
+
                     <div class="skill-list">
 
-                        <span class="skill">AutoCAD</span>
-                        <span class="skill">QGIS</span>
-                        <span class="skill">Illustrator</span>
-                        <span class="skill">InDesign</span>
+                        <span class="skill">
+                            AutoCAD
+                        </span>
+
+                        <span class="skill">
+                            QGIS
+                        </span>
+
+                        <span class="skill">
+                            Illustrator
+                        </span>
+
+                        <span class="skill">
+                            InDesign
+                        </span>
 
                     </div>
 
                 </div>
+
 
             </div>
 
         </section>
 
 
-        <!-- =========================
+
+        <!-- =====================================
              LANGUAGES
-        ========================== -->
+        ====================================== -->
 
         <section class="languages">
+
 
             <div class="section-label">
                 05 — Languages
             </div>
 
+
             <h2 class="section-title">
                 Communication
             </h2>
 
+
             <div class="language-grid">
+
 
                 <div class="language">
 
-                    <strong>Arabic</strong>
+                    <strong>
+                        Arabic
+                    </strong>
 
                     <span>
                         Native
@@ -1186,9 +1495,12 @@
                 </div>
 
 
+
                 <div class="language">
 
-                    <strong>French</strong>
+                    <strong>
+                        French
+                    </strong>
 
                     <span>
                         C1 — Advanced
@@ -1197,9 +1509,12 @@
                 </div>
 
 
+
                 <div class="language">
 
-                    <strong>English</strong>
+                    <strong>
+                        English
+                    </strong>
 
                     <span>
                         C1 — Advanced
@@ -1208,9 +1523,12 @@
                 </div>
 
 
+
                 <div class="language">
 
-                    <strong>Indonesian</strong>
+                    <strong>
+                        Indonesian
+                    </strong>
 
                     <span>
                         A2
@@ -1218,26 +1536,32 @@
 
                 </div>
 
+
             </div>
 
         </section>
 
 
-        <!-- =========================
+
+        <!-- =====================================
              RESEARCH
-        ========================== -->
+        ====================================== -->
 
         <section>
+
 
             <div class="section-label">
                 06 — Research
             </div>
 
+
             <h2 class="section-title">
                 Research & Publications
             </h2>
 
+
             <div class="research-list">
+
 
                 <article class="research-item">
 
@@ -1254,6 +1578,7 @@
                 </article>
 
 
+
                 <article class="research-item">
 
                     <h3>
@@ -1266,6 +1591,7 @@
                     </p>
 
                 </article>
+
 
 
                 <article class="research-item">
@@ -1284,6 +1610,7 @@
                 </article>
 
 
+
                 <article class="research-item">
 
                     <h3>
@@ -1297,24 +1624,29 @@
 
                 </article>
 
+
             </div>
 
         </section>
 
 
-        <!-- =========================
+
+        <!-- =====================================
              CONTACT
-        ========================== -->
+        ====================================== -->
 
         <section class="contact">
+
 
             <div class="section-label">
                 07 — Contact
             </div>
 
+
             <h2 class="section-title">
                 Let's connect
             </h2>
+
 
             <div class="contact-info">
 
@@ -1322,9 +1654,11 @@
                     raniaababssi@gmail.com
                 </a>
 
+
                 <a href="tel:+212663158518">
                     +212 663 158 518
                 </a>
+
 
                 <span>
                     Rabat, Morocco
@@ -1334,12 +1668,14 @@
 
         </section>
 
+
     </main>
 
 
-    <!-- =========================
+
+    <!-- =========================================
          FOOTER
-    ========================== -->
+    ========================================== -->
 
     <footer>
 
