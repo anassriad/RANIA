@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rania Ababssi | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #f7f5f0;
+            color: #252525;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 78px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            background: rgba(247, 245, 240, 0.96);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            font-weight: 600;
+            letter-spacing: 1px;
+
+            color: #252525;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            position: relative;
+
+            text-decoration: none;
+            color: #333;
+
+            font-size: 14px;
+            font-weight: 500;
+
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            transition: 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: -7px;
+
+            width: 0;
+            height: 1px;
+
+            background: #8b7355;
+
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #8b7355;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            min-height: 65vh;
+
+            padding: 150px 9% 90px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "PORTFOLIO";
+
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(100px, 18vw, 260px);
+
+            color: rgba(139, 115, 85, 0.035);
+
+            white-space: nowrap;
+
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-label {
+            color: #8b7355;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(55px, 8vw, 100px);
+
+            font-weight: 500;
+
+            line-height: 0.95;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #8b7355;
+        }
+
+        .hero p {
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #666;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================================
+           PORTFOLIO SECTION
+        ========================================= */
+
+        .portfolio-section {
+            padding: 80px 9% 120px;
+        }
+
+        .portfolio-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* =========================================
+           PROJECT
+        ========================================= */
+
+        .project {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+            padding: 90px 0;
+
+            border-bottom: 1px solid #ddd8cf;
+        }
+
+        .project:first-child {
+            padding-top: 30px;
+        }
+
+        .project:last-child {
+            border-bottom: none;
+        }
+
+        /* Alternate projects */
+
+        .project:nth-child(even) .project-image {
+            order: 2;
+        }
+
+        .project:nth-child(even) .project-content {
+            order: 1;
+        }
+
+
+        /* =========================================
+           PROJECT IMAGE
+        ========================================= */
+
+        .project-image {
+            position: relative;
+
+            overflow: hidden;
+
+            background: #ddd;
+
+            aspect-ratio: 4 / 3;
+        }
+
+        .project-image::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 18px;
+
+            border: 1px solid rgba(255, 255, 255, 0.65);
+
+            pointer-events: none;
+
+            z-index: 2;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition: transform 0.6s ease;
+        }
+
+        .project:hover .project-image img {
+            transform: scale(1.04);
+        }
+
+
+        /* =========================================
+           PROJECT INFORMATION
+        ========================================= */
+
+        .project-number {
+            font-family: "Playfair Display", serif;
+
+            font-size: 18px;
+
+            color: #8b7355;
+
+            margin-bottom: 12px;
+        }
+
+        .project-title {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(34px, 4vw, 52px);
+
+            line-height: 1.05;
+
+            font-weight: 500;
+
+            margin-bottom: 15px;
+        }
+
+        .project-title span {
+            color: #8b7355;
+        }
+
+        .project-category {
+            display: inline-block;
+
+            color: #8b7355;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+        .academic {
+            color: #888;
+
+            font-size: 14px;
+
+            margin-bottom: 25px;
+        }
+
+        .supervisor {
+            border-left: 2px solid #8b7355;
+
+            padding-left: 18px;
+
+            margin-bottom: 25px;
+        }
+
+        .supervisor-label {
+            display: block;
+
+            color: #999;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 4px;
+        }
+
+        .supervisor-name {
+            color: #555;
+
+            font-size: 14px;
+        }
+
+        .description {
+            color: #666;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================================
+           PROJECT BUTTON
+        ========================================= */
+
+        .portfolio-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 13px 22px;
+
+            background: #8b7355;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            transition: 0.3s ease;
+        }
+
+        .portfolio-button:hover {
+            background: #6e5a43;
+
+            transform: translateY(-2px);
+        }
+
+        .portfolio-button span {
+            font-size: 17px;
+
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-button:hover span {
+            transform: translateX(4px);
+        }
+
+
+        /* =========================================
+           FULL PORTFOLIO
+        ========================================= */
+
+        .full-portfolio {
+            background: #252525;
+
+            color: white;
+
+            padding: 100px 9%;
+
+            text-align: center;
+        }
+
+        .full-portfolio .section-label {
+            color: #b59a76;
+        }
+
+        .full-portfolio h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(40px, 5vw, 65px);
+
+            font-weight: 500;
+
+            margin-bottom: 20px;
+        }
+
+        .full-portfolio p {
+            max-width: 650px;
+
+            margin: 0 auto 35px;
+
+            color: #bbb;
+
+            font-size: 16px;
+        }
+
+        .full-button {
+            display: inline-block;
+
+            padding: 15px 30px;
+
+            border: 1px solid #b59a76;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            transition: 0.3s ease;
+        }
+
+        .full-button:hover {
+            background: #b59a76;
+
+            color: #252525;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            padding: 30px 9%;
+
+            background: #1c1c1c;
+
+            color: #aaa;
+
+            text-align: center;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 850px) {
+
+            .navbar {
+                padding: 0 5%;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .project {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+
+                padding: 70px 0;
+            }
+
+            .project:nth-child(even) .project-image {
+                order: initial;
+            }
+
+            .project:nth-child(even) .project-content {
+                order: initial;
+            }
+
+            .portfolio-section {
+                padding-left: 7%;
+                padding-right: 7%;
+            }
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 500px) {
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 9px;
+            }
+
+            .hero {
+                padding-left: 7%;
+                padding-right: 7%;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .project-title {
+                font-size: 36px;
+            }
+
+            .project-image {
+                aspect-ratio: 1 / 1;
+            }
+
+            .project-image::after {
+                inset: 12px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================= -->
+
+    <header class="navbar">
+
+        <a href="bio.html" class="logo">
+            RANIA ABABSSI
+        </a>
+
+
+        <nav>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="bio.html">
+                        Bio
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="elevator-pitch.html">
+                        Elevator Pitch
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="portfolio.html" class="active">
+                        Portfolio
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN
+    ========================================= -->
+
+    <main>
+
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="section-label">
+                    03 — Selected Work
+                </div>
+
+
+                <h1>
+                    Architecture<br>
+                    <span>Portfolio</span>
+                </h1>
+
+
+                <p>
+                    A selection of academic projects exploring
+                    architecture, culture, technology, and urban design.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             PROJECTS
+        ====================================== -->
+
+        <section class="portfolio-section">
+
+            <div class="portfolio-container">
+
+
+
+                <!-- =================================
+                     PROJECT 01
+                ================================== -->
+
+                <article class="project">
+
+
+                    <div class="project-image">
+
+                        <img
+                            src="yogacarta.png"
+                            alt="Yogyakarta Modern School"
+                        >
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <div class="project-number">
+                            01
+                        </div>
+
+
+                        <h2 class="project-title">
+                            Yogyakarta<br>
+                            Modern School
+                        </h2>
+
+
+                        <div class="project-category">
+                            Building Technology
+                        </div>
+
+
+                        <div class="academic">
+                            Academic Project
+                        </div>
+
+
+                        <div class="supervisor">
+
+                            <span class="supervisor-label">
+                                Project Supervisor
+                            </span>
+
+                            <span class="supervisor-name">
+                                Prof. Noor Cholis Idham, Ph.D., IAI
+                            </span>
+
+                        </div>
+
+
+                        <p class="description">
+                            An academic architecture project exploring
+                            building technology and its application in
+                            the design of a modern educational environment
+                            in Yogyakarta.
+                        </p>
+
+
+                        <a
+                            href="https://drive.google.com/file/d/1IvDzR1EgK0LfOWj7F-46rJidIs7Lvg7W/view"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="portfolio-button"
+                        >
+                            View Full Portfolio
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================
+                     PROJECT 02
+                ================================== -->
+
+                <article class="project">
+
+
+                    <div class="project-image">
+
+                        <img
+                            src="toilet.png"
+                            alt="Public Toilet"
+                        >
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <div class="project-number">
+                            02
+                        </div>
+
+
+                        <h2 class="project-title">
+                            Public<br>
+                            Toilet
+                        </h2>
+
+
+                        <div class="project-category">
+                            Culture Design
+                        </div>
+
+
+                        <div class="academic">
+                            Academic Project
+                        </div>
+
+
+                        <div class="supervisor">
+
+                            <span class="supervisor-label">
+                                Project Supervisor
+                            </span>
+
+                            <span class="supervisor-name">
+                                Dr. Ir. Wiryono Raharjo
+                            </span>
+
+                        </div>
+
+
+                        <p class="description">
+                            A cultural design project investigating how
+                            architecture and everyday public facilities
+                            can respond to cultural context and human
+                            needs.
+                        </p>
+
+
+                        <a
+                            href="https://drive.google.com/file/d/1IvDzR1EgK0LfOWj7F-46rJidIs7Lvg7W/view"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="portfolio-button"
+                        >
+                            View Full Portfolio
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================
+                     PROJECT 03
+                ================================== -->
+
+                <article class="project">
+
+
+                    <div class="project-image">
+
+                        <img
+                            src="hub.png"
+                            alt="Weaving Hub Threaded Community"
+                        >
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <div class="project-number">
+                            03
+                        </div>
+
+
+                        <h2 class="project-title">
+                            Weaving Hub<br>
+                            <span>Threaded Community</span>
+                        </h2>
+
+
+                        <div class="project-category">
+                            Cultural Project
+                        </div>
+
+
+                        <div class="academic">
+                            Academic Project
+                        </div>
+
+
+                        <div class="supervisor">
+
+                            <span class="supervisor-label">
+                                Project Supervisor
+                            </span>
+
+                            <span class="supervisor-name">
+                                Dr. Ing. Putu Ayu Agustiananda
+                            </span>
+
+                        </div>
+
+
+                        <p class="description">
+                            A cultural architecture project centered on
+                            weaving, community, and the relationship
+                            between architectural space and local
+                            cultural practices.
+                        </p>
+
+
+                        <a
+                            href="https://drive.google.com/file/d/1IvDzR1EgK0LfOWj7F-46rJidIs7Lvg7W/view"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="portfolio-button"
+                        >
+                            View Full Portfolio
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================
+                     PROJECT 04
+                ================================== -->
+
+                <article class="project">
+
+
+                    <div class="project-image">
+
+                        <img
+                            src="jaladhar.png"
+                            alt="Jaladhar Floating City"
+                        >
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <div class="project-number">
+                            04
+                        </div>
+
+
+                        <h2 class="project-title">
+                            Jaladhar<br>
+                            Floating City
+                        </h2>
+
+
+                        <div class="project-category">
+                            Urban Design Project
+                        </div>
+
+
+                        <div class="academic">
+                            Academic Project
+                        </div>
+
+
+                        <div class="supervisor">
+
+                            <span class="supervisor-label">
+                                Project Supervisor
+                            </span>
+
+                            <span class="supervisor-name">
+                                M. Faiz Hamdi Suprahman
+                            </span>
+
+                        </div>
+
+
+                        <p class="description">
+                            An urban design project exploring the idea
+                            of a floating city and the possibilities of
+                            creating urban environments adapted to
+                            water-based contexts.
+                        </p>
+
+
+                        <a
+                            href="https://drive.google.com/file/d/1IvDzR1EgK0LfOWj7F-46rJidIs7Lvg7W/view"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="portfolio-button"
+                        >
+                            View Full Portfolio
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             FULL PORTFOLIO CTA
+        ====================================== -->
+
+        <section class="full-portfolio">
+
+            <div class="section-label">
+                Complete Collection
+            </div>
+
+
+            <h2>
+                Explore the full portfolio
+            </h2>
+
+
+            <p>
+                Discover the complete collection of Rania's
+                architectural projects, research, design work,
+                and academic studies.
+            </p>
+
+
+            <a
+                href="https://drive.google.com/file/d/1IvDzR1EgK0LfOWj7F-46rJidIs7Lvg7W/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="full-button"
+            >
+                Open Full Portfolio
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        © 2026 Rania Ababssi — Architecture Portfolio
+
+    </footer>
+
+
+</body>
+
+</html>
