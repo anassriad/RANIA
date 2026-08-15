@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,10 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
     <style>
 
@@ -31,77 +26,63 @@
         body {
             font-family: "DM Sans", sans-serif;
             background: #f7f5f0;
-            color: #252525;
+            color: #292929;
             line-height: 1.6;
         }
 
-
-        /* =========================
-           NAVBAR
-        ========================= */
+        /* NAVBAR */
 
         .navbar {
             position: fixed;
             top: 0;
             left: 0;
-
             width: 100%;
             height: 78px;
 
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
 
             padding: 0 7%;
 
-            background: rgba(247, 245, 240, 0.96);
-            backdrop-filter: blur(12px);
+            background: rgba(247,245,240,0.96);
+            backdrop-filter: blur(10px);
 
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid #ddd8cf;
 
             z-index: 1000;
         }
 
         .logo {
             font-family: "Playfair Display", serif;
-
-            font-size: 25px;
-            font-weight: 600;
-
-            letter-spacing: 1px;
-
-            color: #252525;
+            font-size: 24px;
+            color: #292929;
             text-decoration: none;
-
-            transition: 0.3s ease;
-        }
-
-        .logo:hover {
-            color: #8b7355;
+            letter-spacing: 1px;
         }
 
         .nav-links {
             display: flex;
-            align-items: center;
-
-            gap: 40px;
-
+            gap: 35px;
             list-style: none;
         }
 
         .nav-links a {
             position: relative;
 
-            color: #333;
             text-decoration: none;
+            color: #444;
 
-            font-size: 14px;
-            font-weight: 500;
-
-            letter-spacing: 1px;
+            font-size: 12px;
             text-transform: uppercase;
+            letter-spacing: 1.5px;
 
-            transition: 0.3s ease;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #8b7355;
         }
 
         .nav-links a::after {
@@ -117,12 +98,7 @@
 
             background: #8b7355;
 
-            transition: 0.3s ease;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #8b7355;
+            transition: 0.3s;
         }
 
         .nav-links a:hover::after,
@@ -130,141 +106,93 @@
             width: 100%;
         }
 
-
-        /* =========================
-           HERO
-        ========================= */
+        /* HERO */
 
         .hero {
             min-height: 100vh;
 
-            padding: 140px 9% 90px;
+            padding: 130px 9% 80px;
 
             display: flex;
             align-items: center;
-
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: "RANIA";
-
-            position: absolute;
-
-            right: -5%;
-            top: 45%;
-
-            transform: translateY(-50%);
-
-            font-family: "Playfair Display", serif;
-
-            font-size: clamp(150px, 25vw, 380px);
-
-            color: rgba(139, 115, 85, 0.035);
-
-            white-space: nowrap;
-
-            pointer-events: none;
         }
 
         .hero-container {
             width: 100%;
-            max-width: 1250px;
+            max-width: 1200px;
 
             margin: auto;
 
             display: grid;
-
             grid-template-columns: 1fr 1fr;
 
-            gap: 90px;
+            gap: 80px;
 
             align-items: center;
-
-            position: relative;
-            z-index: 2;
         }
 
-
-        /* =========================
-           HERO TEXT
-        ========================= */
-
-        .hero-label {
+        .label {
             color: #8b7355;
 
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
 
+            text-transform: uppercase;
             letter-spacing: 5px;
 
-            text-transform: uppercase;
-
-            margin-bottom: 22px;
+            margin-bottom: 20px;
         }
 
-        .hero h1 {
+        h1 {
             font-family: "Playfair Display", serif;
 
-            font-size: clamp(60px, 7vw, 105px);
+            font-size: clamp(65px, 8vw, 105px);
+
+            line-height: 0.92;
 
             font-weight: 500;
 
-            line-height: 0.95;
-
-            margin-bottom: 28px;
+            margin-bottom: 30px;
         }
 
-        .hero h1 span {
+        h1 span {
             color: #8b7355;
         }
 
-        .hero-intro {
-            max-width: 570px;
+        .intro {
+            max-width: 560px;
 
             color: #666;
 
-            font-size: 18px;
+            font-size: 17px;
 
-            line-height: 1.8;
+            line-height: 1.9;
 
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
-        .hero-role {
-            display: inline-block;
-
+        .role {
             color: #8b7355;
 
-            font-size: 13px;
+            border-left: 2px solid #8b7355;
 
+            padding-left: 15px;
+
+            font-size: 12px;
             font-weight: 600;
 
             letter-spacing: 2px;
 
             text-transform: uppercase;
-
-            border-left: 2px solid #8b7355;
-
-            padding-left: 15px;
         }
 
-
-        /* =========================
-           PHOTO
-        ========================= */
-
-        .hero-photo {
+        .photo {
             position: relative;
-
-            width: 100%;
-            max-width: 500px;
-
+            max-width: 480px;
             margin-left: auto;
         }
 
-        .hero-photo::before {
+        .photo::before {
             content: "";
 
             position: absolute;
@@ -272,16 +200,14 @@
             top: -25px;
             right: -25px;
 
-            width: 75%;
-            height: 75%;
+            width: 70%;
+            height: 70%;
 
             border-top: 1px solid #b59a76;
             border-right: 1px solid #b59a76;
-
-            z-index: 0;
         }
 
-        .hero-photo::after {
+        .photo::after {
             content: "";
 
             position: absolute;
@@ -289,213 +215,168 @@
             bottom: -25px;
             left: -25px;
 
-            width: 75%;
-            height: 75%;
+            width: 70%;
+            height: 70%;
 
             border-bottom: 1px solid #b59a76;
             border-left: 1px solid #b59a76;
-
-            z-index: 0;
         }
 
-        .hero-photo img {
+        .photo img {
             position: relative;
-
-            z-index: 1;
-
-            width: 100%;
+            z-index: 2;
 
             display: block;
+
+            width: 100%;
 
             aspect-ratio: 4 / 5;
 
             object-fit: cover;
 
-            box-shadow:
-                0 25px 70px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
         }
 
-
-        /* =========================
-           ABOUT
-        ========================= */
+        /* ABOUT */
 
         .about {
             padding: 120px 9%;
 
             background: #252525;
-
             color: white;
         }
 
         .about-container {
             max-width: 1100px;
-
             margin: auto;
 
             display: grid;
-
             grid-template-columns: 0.7fr 1.3fr;
 
             gap: 80px;
         }
 
-        .section-label {
-            color: #b59a76;
-
-            font-size: 12px;
-            font-weight: 600;
-
-            letter-spacing: 5px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 20px;
-        }
-
         .about h2 {
             font-family: "Playfair Display", serif;
 
-            font-size: clamp(40px, 5vw, 65px);
+            font-size: 60px;
 
             font-weight: 500;
 
             line-height: 1;
         }
 
-        .about-text p {
+        .about p {
             color: #bbb;
 
             font-size: 16px;
 
             line-height: 1.9;
 
-            margin-bottom: 22px;
+            margin-bottom: 20px;
         }
 
-
-        /* =========================
-           SKILLS
-        ========================= */
+        /* SKILLS */
 
         .skills {
             padding: 120px 9%;
         }
 
-        .skills-container {
-            max-width: 1100px;
-
-            margin: auto;
-        }
-
-        .skills-heading {
+        .center {
             text-align: center;
-
-            margin-bottom: 70px;
+            margin-bottom: 60px;
         }
 
-        .skills-heading h2 {
+        .center h2 {
             font-family: "Playfair Display", serif;
 
-            font-size: clamp(45px, 6vw, 70px);
+            font-size: 60px;
 
             font-weight: 500;
         }
 
         .skills-grid {
-            display: grid;
+            max-width: 1100px;
+            margin: auto;
 
+            display: grid;
             grid-template-columns: repeat(2, 1fr);
 
             gap: 25px;
         }
 
-        .skill-category {
+        .skill-card {
             padding: 35px;
 
             border: 1px solid #ddd8cf;
 
             background: #faf9f6;
 
-            transition: 0.3s ease;
+            transition: 0.3s;
         }
 
-        .skill-category:hover {
+        .skill-card:hover {
             transform: translateY(-5px);
 
             border-color: #b59a76;
-
-            box-shadow:
-                0 15px 35px rgba(0, 0, 0, 0.06);
         }
 
-        .skill-category h3 {
+        .skill-card h3 {
             font-family: "Playfair Display", serif;
 
-            font-size: 26px;
+            font-size: 28px;
 
             font-weight: 500;
 
             margin-bottom: 20px;
         }
 
-        .skill-list {
+        .skills-list {
             display: flex;
-
             flex-wrap: wrap;
-
             gap: 10px;
         }
 
         .skill {
-            display: inline-block;
+            border: 1px solid #d6d0c7;
 
             padding: 8px 13px;
-
-            border: 1px solid #d6d0c7;
 
             color: #666;
 
             font-size: 12px;
-
-            letter-spacing: 0.5px;
         }
 
+        /* CTA */
 
-        /* =========================
-           NEXT SECTION
-        ========================= */
-
-        .next-section {
+        .cta {
             padding: 100px 9%;
 
-            text-align: center;
-
             background: #ebe7df;
+
+            text-align: center;
         }
 
-        .next-section h2 {
+        .cta h2 {
             font-family: "Playfair Display", serif;
 
-            font-size: clamp(40px, 5vw, 60px);
+            font-size: 55px;
 
             font-weight: 500;
 
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        .next-section p {
+        .cta p {
             color: #777;
 
-            margin-bottom: 30px;
+            max-width: 600px;
+
+            margin: auto auto 30px;
         }
 
-        .next-button {
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 12px;
+        .button {
+            display: inline-block;
 
             padding: 14px 25px;
 
@@ -505,85 +386,40 @@
 
             text-decoration: none;
 
-            font-size: 12px;
-
-            font-weight: 600;
-
-            letter-spacing: 1px;
+            font-size: 11px;
 
             text-transform: uppercase;
 
-            transition: 0.3s ease;
+            letter-spacing: 1.5px;
+
+            transition: 0.3s;
         }
 
-        .next-button:hover {
+        .button:hover {
             background: #6e5a43;
 
             transform: translateY(-2px);
         }
 
-
-        /* =========================
-           FOOTER
-        ========================= */
+        /* FOOTER */
 
         footer {
-            padding: 30px 9%;
-
             background: #1c1c1c;
 
-            color: #aaa;
+            color: #888;
 
             text-align: center;
+
+            padding: 30px;
 
             font-size: 13px;
         }
 
+        /* MOBILE */
 
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
-        @media (max-width: 900px) {
+        @media(max-width:800px) {
 
             .navbar {
-                padding: 0 5%;
-            }
-
-            .nav-links {
-                gap: 18px;
-            }
-
-            .nav-links a {
-                font-size: 11px;
-            }
-
-            .hero-container {
-                grid-template-columns: 1fr;
-
-                gap: 60px;
-            }
-
-            .hero-photo {
-                margin: auto;
-
-                max-width: 450px;
-            }
-
-            .about-container {
-                grid-template-columns: 1fr;
-
-                gap: 40px;
-            }
-
-        }
-
-
-        @media (max-width: 600px) {
-
-            .navbar {
-                height: 70px;
-
                 padding: 0 4%;
             }
 
@@ -592,314 +428,327 @@
             }
 
             .nav-links {
-                gap: 9px;
+                gap: 12px;
             }
 
             .nav-links a {
                 font-size: 8px;
-
-                letter-spacing: 0.5px;
+                letter-spacing: .5px;
             }
 
-            .hero {
-                padding: 100px 7% 70px;
+            .hero-container {
+                grid-template-columns: 1fr;
+
+                gap: 60px;
             }
 
-            .hero h1 {
-                font-size: 55px;
+            .photo {
+                margin: auto;
             }
 
-            .hero-intro {
-                font-size: 16px;
+            .about-container {
+                grid-template-columns: 1fr;
             }
 
             .skills-grid {
                 grid-template-columns: 1fr;
             }
 
-            .about,
-            .skills {
-                padding-left: 7%;
-                padding-right: 7%;
+            .about h2,
+            .center h2,
+            .cta h2 {
+                font-size: 45px;
             }
-
         }
 
     </style>
-
 </head>
-
 
 <body>
 
+<header class="navbar">
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
+    <a href="index.html" class="logo">
+        RANIA ABABSSI
+    </a>
 
-    <header class="navbar">
+    <nav>
 
-        <a href="index.html" class="logo">
-            RANIA ABABSSI
-        </a>
+        <ul class="nav-links">
 
-        <nav>
+            <li>
+                <a href="index.html" class="active">
+                    Bio
+                </a>
+            </li>
 
-            <ul class="nav-links">
+            <li>
+                <a href="elevator-pitch.html">
+                    Elevator Pitch
+                </a>
+            </li>
 
-                <li>
-                    <a href="index.html" class="active">
-                        Bio
-                    </a>
-                </li>
+            <li>
+                <a href="portfolio.html">
+                    Portfolio
+                </a>
+            </li>
 
-                <li>
-                    <a href="elevator-pitch.html">
-                        Elevator Pitch
-                    </a>
-                </li>
+            <li>
+                <a href="research.html">
+                    Research
+                </a>
+            </li>
 
-                <li>
-                    <a href="portfolio.html">
-                        Portfolio
-                    </a>
-                </li>
+        </ul>
 
-            </ul>
+    </nav>
 
-        </nav>
-
-    </header>
-
-
-
-    <!-- =========================
-         MAIN
-    ========================= -->
-
-    <main>
+</header>
 
 
-        <!-- HERO -->
+<main>
 
-        <section class="hero">
+    <section class="hero">
 
-            <div class="hero-container">
+        <div class="hero-container">
 
+            <div>
 
-                <div class="hero-content">
-
-                    <div class="hero-label">
-                        01 — About
-                    </div>
-
-                    <h1>
-                        Rania<br>
-                        <span>Ababssi</span>
-                    </h1>
-
-                    <p class="hero-intro">
-                        Architecture student and designer with a passion
-                        for creating meaningful spaces that connect people,
-                        culture, technology, and the built environment.
-                    </p>
-
-                    <div class="hero-role">
-                        Architecture & Design
-                    </div>
-
+                <div class="label">
+                    01 — About
                 </div>
 
+                <h1>
+                    Rania<br>
+                    <span>Ababssi</span>
+                </h1>
 
-                <div class="hero-photo">
+                <p class="intro">
+                    Architecture student and designer with a passion
+                    for creating meaningful spaces that connect people,
+                    culture, technology, and the built environment.
+                </p>
 
-                    <img
-                        src="rania.png"
-                        alt="Rania Ababssi"
-                    >
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ABOUT -->
-
-        <section class="about">
-
-            <div class="about-container">
-
-                <div>
-
-                    <div class="section-label">
-                        Profile
-                    </div>
-
-                    <h2>
-                        Designing<br>
-                        with purpose.
-                    </h2>
-
-                </div>
-
-
-                <div class="about-text">
-
-                    <p>
-                        Rania Ababssi is an architecture student
-                        interested in the relationship between
-                        architecture, culture, technology, and
-                        communities.
-                    </p>
-
-                    <p>
-                        Through academic and cultural projects,
-                        she explores how architectural design can
-                        respond to people, their environment, and
-                        the identity of a place.
-                    </p>
-
-                    <p>
-                        Her portfolio reflects a growing interest
-                        in architectural design, building technology,
-                        cultural projects, and urban design.
-                    </p>
-
+                <div class="role">
+                    Architecture & Design
                 </div>
 
             </div>
 
-        </section>
 
+            <div class="photo">
 
-
-        <!-- SKILLS -->
-
-        <section class="skills">
-
-            <div class="skills-container">
-
-
-                <div class="skills-heading">
-
-                    <div class="section-label">
-                        04 — Skills
-                    </div>
-
-                    <h2>
-                        Architecture & Design
-                    </h2>
-
-                </div>
-
-
-                <div class="skills-grid">
-
-
-                    <div class="skill-category">
-
-                        <h3>
-                            Architecture & Design
-                        </h3>
-
-                        <div class="skill-list">
-
-                            <span class="skill">
-                                Revit
-                            </span>
-
-                            <span class="skill">
-                                Archicad
-                            </span>
-
-                            <span class="skill">
-                                SketchUp
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-category">
-
-                        <h3>
-                            Design
-                        </h3>
-
-                        <div class="skill-list">
-
-                            <span class="skill">
-                                Architectural Design
-                            </span>
-
-                            <span class="skill">
-                                Urban Design
-                            </span>
-
-                            <span class="skill">
-                                Cultural Design
-                            </span>
-
-                            <span class="skill">
-                                Building Technology
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
+                <img
+                    src="rania.png"
+                    alt="Rania Ababssi"
+                >
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
+    <section class="about">
 
-        <!-- NEXT PAGE -->
+        <div class="about-container">
 
-        <section class="next-section">
+            <div>
 
-            <div class="section-label">
-                Continue
+                <div class="label">
+                    Profile
+                </div>
+
+                <h2>
+                    Designing<br>
+                    with purpose.
+                </h2>
+
+            </div>
+
+            <div>
+
+                <p>
+                    Rania Ababssi is an architecture student
+                    interested in the relationship between
+                    architecture, culture, technology, and
+                    communities.
+                </p>
+
+                <p>
+                    Through academic and cultural projects,
+                    she explores how architectural design can
+                    respond to people, their environment, and
+                    the identity of a place.
+                </p>
+
+                <p>
+                    Her experience also extends into academic
+                    research, including adaptive reuse,
+                    sustainable materials, building performance,
+                    fire safety, and evacuation simulation.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="skills">
+
+        <div class="center">
+
+            <div class="label">
+                04 — Skills
             </div>
 
             <h2>
-                Hear Rania's story.
+                Architecture & Design
             </h2>
 
-            <p>
-                Discover her professional journey and aspirations
-                through her elevator pitch.
-            </p>
-
-            <a
-                href="elevator-pitch.html"
-                class="next-button"
-            >
-                Explore Elevator Pitch →
-            </a>
-
-        </section>
+        </div>
 
 
-    </main>
+        <div class="skills-grid">
+
+            <div class="skill-card">
+
+                <h3>
+                    Software
+                </h3>
+
+                <div class="skills-list">
+
+                    <span class="skill">Revit</span>
+                    <span class="skill">Archicad</span>
+                    <span class="skill">SketchUp</span>
+
+                </div>
+
+            </div>
 
 
+            <div class="skill-card">
 
-    <footer>
+                <h3>
+                    Design
+                </h3>
 
-        © 2026 Rania Ababssi — Architecture Portfolio
+                <div class="skills-list">
 
-    </footer>
+                    <span class="skill">
+                        Architectural Design
+                    </span>
 
+                    <span class="skill">
+                        Urban Design
+                    </span>
+
+                    <span class="skill">
+                        Cultural Design
+                    </span>
+
+                    <span class="skill">
+                        Building Technology
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Research
+                </h3>
+
+                <div class="skills-list">
+
+                    <span class="skill">
+                        Adaptive Reuse
+                    </span>
+
+                    <span class="skill">
+                        Sustainable Materials
+                    </span>
+
+                    <span class="skill">
+                        Fire Safety
+                    </span>
+
+                    <span class="skill">
+                        Evacuation Simulation
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Research Experience
+                </h3>
+
+                <div class="skills-list">
+
+                    <span class="skill">
+                        Published Research
+                    </span>
+
+                    <span class="skill">
+                        Co-author
+                    </span>
+
+                    <span class="skill">
+                        Research Assistant
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="cta">
+
+        <div class="label">
+            Continue
+        </div>
+
+        <h2>
+            Hear Rania's story.
+        </h2>
+
+        <p>
+            Discover her professional journey and aspirations
+            through her elevator pitch.
+        </p>
+
+        <a
+            href="elevator-pitch.html"
+            class="button"
+        >
+            Explore Elevator Pitch →
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+    © 2026 Rania Ababssi — Architecture Portfolio
+</footer>
 
 </body>
-
 </html>
