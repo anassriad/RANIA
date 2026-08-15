@@ -8,7 +8,6 @@
 
     <title>Rania Ababssi | Portfolio</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -18,10 +17,6 @@
     >
 
     <style>
-
-        /* =========================================
-           RESET
-        ========================================= */
 
         * {
             margin: 0;
@@ -35,30 +30,38 @@
 
         body {
             font-family: "DM Sans", sans-serif;
+
             background: #f7f5f0;
+
             color: #252525;
+
             line-height: 1.6;
         }
 
 
-        /* =========================================
+        /* =========================
            NAVIGATION
-        ========================================= */
+        ========================= */
 
         .navbar {
             position: fixed;
+
             top: 0;
             left: 0;
+
             width: 100%;
             height: 78px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
 
             padding: 0 7%;
 
             background: rgba(247, 245, 240, 0.96);
+
             backdrop-filter: blur(12px);
 
             border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -68,30 +71,47 @@
 
         .logo {
             font-family: "Playfair Display", serif;
+
             font-size: 25px;
+
             font-weight: 600;
+
             letter-spacing: 1px;
 
             color: #252525;
+
             text-decoration: none;
+
+            transition: 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #8b7355;
         }
 
         .nav-links {
             display: flex;
+
+            align-items: center;
+
             gap: 40px;
+
             list-style: none;
         }
 
         .nav-links a {
             position: relative;
 
-            text-decoration: none;
             color: #333;
 
+            text-decoration: none;
+
             font-size: 14px;
+
             font-weight: 500;
 
             letter-spacing: 1px;
+
             text-transform: uppercase;
 
             transition: 0.3s ease;
@@ -113,20 +133,20 @@
             transition: 0.3s ease;
         }
 
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 100%;
-        }
-
         .nav-links a:hover,
         .nav-links a.active {
             color: #8b7355;
         }
 
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
 
-        /* =========================================
+
+        /* =========================
            HERO
-        ========================================= */
+        ========================= */
 
         .hero {
             min-height: 65vh;
@@ -134,12 +154,15 @@
             padding: 150px 9% 90px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             text-align: center;
 
             position: relative;
+
             overflow: hidden;
         }
 
@@ -166,6 +189,7 @@
 
         .hero-content {
             position: relative;
+
             z-index: 2;
         }
 
@@ -173,6 +197,7 @@
             color: #8b7355;
 
             font-size: 12px;
+
             font-weight: 600;
 
             letter-spacing: 5px;
@@ -209,9 +234,9 @@
         }
 
 
-        /* =========================================
+        /* =========================
            PORTFOLIO SECTION
-        ========================================= */
+        ========================= */
 
         .portfolio-section {
             padding: 80px 9% 120px;
@@ -219,13 +244,14 @@
 
         .portfolio-container {
             max-width: 1200px;
+
             margin: auto;
         }
 
 
-        /* =========================================
+        /* =========================
            PROJECT
-        ========================================= */
+        ========================= */
 
         .project {
             display: grid;
@@ -249,8 +275,6 @@
             border-bottom: none;
         }
 
-        /* Alternate projects */
-
         .project:nth-child(even) .project-image {
             order: 2;
         }
@@ -260,9 +284,9 @@
         }
 
 
-        /* =========================================
+        /* =========================
            PROJECT IMAGE
-        ========================================= */
+        ========================= */
 
         .project-image {
             position: relative;
@@ -290,6 +314,7 @@
 
         .project-image img {
             width: 100%;
+
             height: 100%;
 
             display: block;
@@ -304,9 +329,9 @@
         }
 
 
-        /* =========================================
-           PROJECT INFORMATION
-        ========================================= */
+        /* =========================
+           PROJECT TEXT
+        ========================= */
 
         .project-number {
             font-family: "Playfair Display", serif;
@@ -397,9 +422,9 @@
         }
 
 
-        /* =========================================
+        /* =========================
            PROJECT BUTTON
-        ========================================= */
+        ========================= */
 
         .portfolio-button {
             display: inline-flex;
@@ -444,9 +469,9 @@
         }
 
 
-        /* =========================================
+        /* =========================
            FULL PORTFOLIO
-        ========================================= */
+        ========================= */
 
         .full-portfolio {
             background: #252525;
@@ -511,9 +536,70 @@
         }
 
 
-        /* =========================================
+        /* =========================
+           BACK TO BIO
+        ========================= */
+
+        .next-section {
+            padding: 90px 9%;
+
+            background: #ebe7df;
+
+            text-align: center;
+        }
+
+        .next-section h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(40px, 5vw, 60px);
+
+            font-weight: 500;
+
+            margin-bottom: 25px;
+        }
+
+        .next-section p {
+            color: #777;
+
+            margin-bottom: 30px;
+        }
+
+        .next-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 14px 25px;
+
+            background: #8b7355;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            transition: 0.3s ease;
+        }
+
+        .next-button:hover {
+            background: #6e5a43;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
            FOOTER
-        ========================================= */
+        ========================= */
 
         footer {
             padding: 30px 9%;
@@ -528,9 +614,9 @@
         }
 
 
-        /* =========================================
-           TABLET
-        ========================================= */
+        /* =========================
+           RESPONSIVE
+        ========================= */
 
         @media (max-width: 850px) {
 
@@ -554,10 +640,7 @@
                 padding: 70px 0;
             }
 
-            .project:nth-child(even) .project-image {
-                order: initial;
-            }
-
+            .project:nth-child(even) .project-image,
             .project:nth-child(even) .project-content {
                 order: initial;
             }
@@ -566,25 +649,30 @@
                 padding-left: 7%;
                 padding-right: 7%;
             }
+
         }
 
 
-        /* =========================================
-           MOBILE
-        ========================================= */
-
         @media (max-width: 500px) {
 
+            .navbar {
+                height: 70px;
+
+                padding: 0 4%;
+            }
+
             .logo {
-                font-size: 18px;
+                font-size: 17px;
             }
 
             .nav-links {
-                gap: 10px;
+                gap: 9px;
             }
 
             .nav-links a {
-                font-size: 9px;
+                font-size: 8px;
+
+                letter-spacing: 0.5px;
             }
 
             .hero {
@@ -607,6 +695,7 @@
             .project-image::after {
                 inset: 12px;
             }
+
         }
 
     </style>
@@ -617,34 +706,31 @@
 <body>
 
 
-    <!-- =========================================
+    <!-- =========================
          NAVIGATION
-    ========================================= -->
+    ========================= -->
 
     <header class="navbar">
 
-        <a href="bio.html" class="logo">
+        <a href="index.html" class="logo">
             RANIA ABABSSI
         </a>
-
 
         <nav>
 
             <ul class="nav-links">
 
                 <li>
-                    <a href="bio.html">
+                    <a href="index.html">
                         Bio
                     </a>
                 </li>
-
 
                 <li>
                     <a href="elevator-pitch.html">
                         Elevator Pitch
                     </a>
                 </li>
-
 
                 <li>
                     <a href="portfolio.html" class="active">
@@ -660,16 +746,14 @@
 
 
 
-    <!-- =========================================
+    <!-- =========================
          MAIN
-    ========================================= -->
+    ========================= -->
 
     <main>
 
 
-        <!-- =====================================
-             HERO
-        ====================================== -->
+        <!-- HERO -->
 
         <section class="hero">
 
@@ -679,12 +763,10 @@
                     03 — Selected Work
                 </div>
 
-
                 <h1>
                     Architecture<br>
                     <span>Portfolio</span>
                 </h1>
-
 
                 <p>
                     A selection of academic projects exploring
@@ -697,19 +779,16 @@
 
 
 
-        <!-- =====================================
-             PROJECTS
-        ====================================== -->
+        <!-- PROJECTS -->
 
         <section class="portfolio-section">
 
             <div class="portfolio-container">
 
 
-
-                <!-- =================================
+                <!-- =========================
                      PROJECT 01
-                ================================== -->
+                ========================= -->
 
                 <article class="project">
 
@@ -730,22 +809,18 @@
                             01
                         </div>
 
-
                         <h2 class="project-title">
                             Yogyakarta<br>
                             Modern School
                         </h2>
 
-
                         <div class="project-category">
                             Building Technology
                         </div>
 
-
                         <div class="academic">
                             Academic Project
                         </div>
-
 
                         <div class="supervisor">
 
@@ -759,14 +834,12 @@
 
                         </div>
 
-
                         <p class="description">
                             An academic architecture project exploring
                             building technology and its application in
                             the design of a modern educational environment
                             in Yogyakarta.
                         </p>
-
 
                         <a
                             href="https://drive.google.com/file/d/1IvDzR1EgK0LfOWj7F-46rJidIs7Lvg7W/view"
@@ -784,9 +857,9 @@
 
 
 
-                <!-- =================================
+                <!-- =========================
                      PROJECT 02
-                ================================== -->
+                ========================= -->
 
                 <article class="project">
 
@@ -807,22 +880,18 @@
                             02
                         </div>
 
-
                         <h2 class="project-title">
                             Public<br>
                             Toilet
                         </h2>
 
-
                         <div class="project-category">
                             Culture Design
                         </div>
 
-
                         <div class="academic">
                             Academic Project
                         </div>
-
 
                         <div class="supervisor">
 
@@ -836,14 +905,12 @@
 
                         </div>
 
-
                         <p class="description">
                             A cultural design project investigating how
                             architecture and everyday public facilities
                             can respond to cultural context and human
                             needs.
                         </p>
-
 
                         <a
                             href="https://drive.google.com/file/d/1IvDzR1EgK0LfOWj7F-46rJidIs7Lvg7W/view"
@@ -861,9 +928,9 @@
 
 
 
-                <!-- =================================
+                <!-- =========================
                      PROJECT 03
-                ================================== -->
+                ========================= -->
 
                 <article class="project">
 
@@ -884,22 +951,18 @@
                             03
                         </div>
 
-
                         <h2 class="project-title">
                             Weaving Hub<br>
                             <span>Threaded Community</span>
                         </h2>
 
-
                         <div class="project-category">
                             Cultural Project
                         </div>
 
-
                         <div class="academic">
                             Academic Project
                         </div>
-
 
                         <div class="supervisor">
 
@@ -913,14 +976,12 @@
 
                         </div>
 
-
                         <p class="description">
                             A cultural architecture project centered on
                             weaving, community, and the relationship
                             between architectural space and local
                             cultural practices.
                         </p>
-
 
                         <a
                             href="https://drive.google.com/file/d/1IvDzR1EgK0LfOWj7F-46rJidIs7Lvg7W/view"
@@ -938,9 +999,9 @@
 
 
 
-                <!-- =================================
+                <!-- =========================
                      PROJECT 04
-                ================================== -->
+                ========================= -->
 
                 <article class="project">
 
@@ -961,22 +1022,18 @@
                             04
                         </div>
 
-
                         <h2 class="project-title">
                             Jaladhar<br>
                             Floating City
                         </h2>
 
-
                         <div class="project-category">
                             Urban Design Project
                         </div>
 
-
                         <div class="academic">
                             Academic Project
                         </div>
-
 
                         <div class="supervisor">
 
@@ -990,14 +1047,12 @@
 
                         </div>
 
-
                         <p class="description">
                             An urban design project exploring the idea
                             of a floating city and the possibilities of
                             creating urban environments adapted to
                             water-based contexts.
                         </p>
-
 
                         <a
                             href="https://drive.google.com/file/d/1IvDzR1EgK0LfOWj7F-46rJidIs7Lvg7W/view"
@@ -1020,9 +1075,9 @@
 
 
 
-        <!-- =====================================
-             FULL PORTFOLIO CTA
-        ====================================== -->
+        <!-- =========================
+             COMPLETE PORTFOLIO
+        ========================= -->
 
         <section class="full-portfolio">
 
@@ -1030,18 +1085,15 @@
                 Complete Collection
             </div>
 
-
             <h2>
                 Explore the full portfolio
             </h2>
-
 
             <p>
                 Discover the complete collection of Rania's
                 architectural projects, research, design work,
                 and academic studies.
             </p>
-
 
             <a
                 href="https://drive.google.com/file/d/1IvDzR1EgK0LfOWj7F-46rJidIs7Lvg7W/view"
@@ -1055,13 +1107,39 @@
         </section>
 
 
+
+        <!-- =========================
+             BACK TO BIO
+        ========================= -->
+
+        <section class="next-section">
+
+            <div class="section-label">
+                Back to the beginning
+            </div>
+
+            <h2>
+                Get to know Rania.
+            </h2>
+
+            <p>
+                Return to her biography and discover her profile,
+                skills, and architectural interests.
+            </p>
+
+            <a
+                href="index.html"
+                class="next-button"
+            >
+                ← Back to Bio
+            </a>
+
+        </section>
+
+
     </main>
 
 
-
-    <!-- =========================================
-         FOOTER
-    ========================================= -->
 
     <footer>
 
