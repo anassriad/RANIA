@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="UTF-8">
@@ -9,12 +8,9 @@
     <title>Rania Ababssi | Elevator Pitch</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
     <style>
 
@@ -24,29 +20,15 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: "DM Sans", sans-serif;
 
             background: #f7f5f0;
 
-            color: #252525;
+            color: #292929;
 
             line-height: 1.6;
-
-            min-height: 100vh;
-
-            display: flex;
-            flex-direction: column;
         }
-
-
-        /* =========================
-           NAVIGATION
-        ========================= */
 
         .navbar {
             position: fixed;
@@ -58,16 +40,17 @@
             height: 78px;
 
             display: flex;
-            align-items: center;
+
             justify-content: space-between;
+            align-items: center;
 
             padding: 0 7%;
 
-            background: rgba(247, 245, 240, 0.96);
+            background: rgba(247,245,240,.96);
 
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(10px);
 
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid #ddd8cf;
 
             z-index: 1000;
         }
@@ -75,29 +58,19 @@
         .logo {
             font-family: "Playfair Display", serif;
 
-            font-size: 25px;
-
-            font-weight: 600;
-
-            letter-spacing: 1px;
-
-            color: #252525;
+            font-size: 24px;
 
             text-decoration: none;
 
-            transition: 0.3s ease;
-        }
+            color: #292929;
 
-        .logo:hover {
-            color: #8b7355;
+            letter-spacing: 1px;
         }
 
         .nav-links {
             display: flex;
 
-            align-items: center;
-
-            gap: 40px;
+            gap: 35px;
 
             list-style: none;
         }
@@ -105,19 +78,22 @@
         .nav-links a {
             position: relative;
 
-            color: #333;
-
             text-decoration: none;
 
-            font-size: 14px;
+            color: #444;
 
-            font-weight: 500;
-
-            letter-spacing: 1px;
+            font-size: 12px;
 
             text-transform: uppercase;
 
-            transition: 0.3s ease;
+            letter-spacing: 1.5px;
+
+            transition: .3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #8b7355;
         }
 
         .nav-links a::after {
@@ -133,12 +109,7 @@
 
             background: #8b7355;
 
-            transition: 0.3s ease;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #8b7355;
+            transition: .3s;
         }
 
         .nav-links a:hover::after,
@@ -146,167 +117,73 @@
             width: 100%;
         }
 
-
-        /* =========================
-           MAIN
-        ========================= */
-
         main {
-            flex: 1;
-
             padding-top: 78px;
         }
 
-
-        /* =========================
-           PITCH
-        ========================= */
-
-        .pitch-page {
-            min-height: calc(100vh - 78px);
+        .hero {
+            min-height: 50vh;
 
             display: flex;
 
+            justify-content: center;
             align-items: center;
 
-            justify-content: center;
-
-            padding: 70px 7% 90px;
-
-            position: relative;
-
-            overflow: hidden;
-        }
-
-        .pitch-page::before {
-            content: "PITCH";
-
-            position: absolute;
-
-            left: 50%;
-            top: 50%;
-
-            transform: translate(-50%, -50%);
-
-            font-family: "Playfair Display", serif;
-
-            font-size: clamp(120px, 20vw, 300px);
-
-            color: rgba(139, 115, 85, 0.035);
-
-            white-space: nowrap;
-
-            pointer-events: none;
-        }
-
-        .pitch-container {
-            width: 100%;
-
-            max-width: 1200px;
-
-            position: relative;
-
-            z-index: 2;
-
             text-align: center;
+
+            padding: 100px 7% 70px;
         }
 
-        .section-label {
+        .label {
             color: #8b7355;
 
-            font-size: 12px;
+            font-size: 11px;
 
             font-weight: 600;
 
-            letter-spacing: 5px;
-
             text-transform: uppercase;
 
-            margin-bottom: 18px;
+            letter-spacing: 5px;
+
+            margin-bottom: 20px;
         }
 
-        .pitch-title {
+        h1 {
             font-family: "Playfair Display", serif;
 
-            font-size: clamp(48px, 6vw, 75px);
+            font-size: clamp(55px, 8vw, 100px);
+
+            line-height: .95;
 
             font-weight: 500;
 
-            line-height: 1;
-
-            margin-bottom: 15px;
+            margin-bottom: 25px;
         }
 
-        .pitch-title span {
+        h1 span {
             color: #8b7355;
         }
 
-        .pitch-subtitle {
-            color: #777;
+        .hero p {
+            color: #666;
 
-            font-size: 16px;
-
-            margin-bottom: 45px;
+            font-size: 17px;
         }
 
+        .video-section {
+            padding: 20px 7% 120px;
+        }
 
-        /* =========================
-           VIDEO
-        ========================= */
+        .video-container {
+            max-width: 1100px;
 
-        .video-frame {
-            width: 100%;
+            margin: auto;
 
-            max-width: 1050px;
-
-            margin: 0 auto;
-
-            position: relative;
-
-            background: #202020;
+            background: #1d1d1d;
 
             padding: 10px;
 
-            box-shadow:
-                0 25px 70px rgba(0, 0, 0, 0.16);
-        }
-
-        .video-frame::before {
-            content: "";
-
-            position: absolute;
-
-            top: 20px;
-            left: 20px;
-
-            width: 45px;
-            height: 45px;
-
-            border-top: 1px solid #b59a76;
-            border-left: 1px solid #b59a76;
-
-            z-index: 3;
-
-            pointer-events: none;
-        }
-
-        .video-frame::after {
-            content: "";
-
-            position: absolute;
-
-            bottom: 20px;
-            right: 20px;
-
-            width: 45px;
-            height: 45px;
-
-            border-bottom: 1px solid #b59a76;
-            border-right: 1px solid #b59a76;
-
-            z-index: 3;
-
-            pointer-events: none;
+            box-shadow: 0 25px 70px rgba(0,0,0,.18);
         }
 
         video {
@@ -316,56 +193,49 @@
 
             aspect-ratio: 16 / 9;
 
-            object-fit: contain;
-
             background: #111;
         }
 
-        .video-caption {
-            margin-top: 30px;
+        .caption {
+            max-width: 700px;
+
+            margin: 25px auto 0;
+
+            text-align: center;
 
             color: #777;
 
             font-size: 14px;
-
-            letter-spacing: 0.5px;
         }
 
-
-        /* =========================
-           NEXT
-        ========================= */
-
-        .next-section {
-            padding: 90px 9%;
+        .cta {
+            padding: 100px 9%;
 
             background: #ebe7df;
 
             text-align: center;
         }
 
-        .next-section h2 {
+        .cta h2 {
             font-family: "Playfair Display", serif;
 
-            font-size: clamp(40px, 5vw, 60px);
+            font-size: 55px;
 
             font-weight: 500;
 
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        .next-section p {
+        .cta p {
             color: #777;
 
-            margin-bottom: 30px;
+            max-width: 600px;
+
+            margin: auto auto 30px;
         }
 
-        .next-button {
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 12px;
+        .button {
+            display: inline-block;
 
             padding: 14px 25px;
 
@@ -375,67 +245,34 @@
 
             text-decoration: none;
 
-            font-size: 12px;
-
-            font-weight: 600;
-
-            letter-spacing: 1px;
+            font-size: 11px;
 
             text-transform: uppercase;
 
-            transition: 0.3s ease;
+            letter-spacing: 1.5px;
+
+            transition: .3s;
         }
 
-        .next-button:hover {
+        .button:hover {
             background: #6e5a43;
-
-            transform: translateY(-2px);
         }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
 
         footer {
-            padding: 30px 9%;
+            background: #1c1c1c;
 
-            background: #252525;
-
-            color: #aaa;
+            color: #888;
 
             text-align: center;
+
+            padding: 30px;
 
             font-size: 13px;
         }
 
-
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
-        @media (max-width: 850px) {
+        @media(max-width:800px) {
 
             .navbar {
-                padding: 0 5%;
-            }
-
-            .nav-links {
-                gap: 15px;
-            }
-
-            .nav-links a {
-                font-size: 11px;
-            }
-
-        }
-
-
-        @media (max-width: 500px) {
-
-            .navbar {
-                height: 70px;
-
                 padding: 0 4%;
             }
 
@@ -444,55 +281,20 @@
             }
 
             .nav-links {
-                gap: 9px;
+                gap: 12px;
             }
 
             .nav-links a {
                 font-size: 8px;
-
-                letter-spacing: 0.5px;
+                letter-spacing: .5px;
             }
 
-            main {
-                padding-top: 70px;
+            .hero {
+                min-height: 45vh;
             }
 
-            .pitch-page {
-                min-height: calc(100vh - 70px);
-
-                padding-top: 50px;
-
-                padding-bottom: 60px;
-            }
-
-            .pitch-title {
-                font-size: 48px;
-            }
-
-            .pitch-subtitle {
-                font-size: 14px;
-
-                margin-bottom: 30px;
-            }
-
-            .video-frame {
-                padding: 4px;
-            }
-
-            .video-frame::before {
-                top: 10px;
-                left: 10px;
-
-                width: 25px;
-                height: 25px;
-            }
-
-            .video-frame::after {
-                bottom: 10px;
-                right: 10px;
-
-                width: 25px;
-                height: 25px;
+            .cta h2 {
+                font-size: 43px;
             }
 
         }
@@ -501,145 +303,129 @@
 
 </head>
 
-
 <body>
 
+<header class="navbar">
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
+    <a href="index.html" class="logo">
+        RANIA ABABSSI
+    </a>
 
-    <header class="navbar">
+    <nav>
 
-        <a href="index.html" class="logo">
-            RANIA ABABSSI
-        </a>
+        <ul class="nav-links">
 
-        <nav>
+            <li>
+                <a href="index.html">
+                    Bio
+                </a>
+            </li>
 
-            <ul class="nav-links">
+            <li>
+                <a href="elevator-pitch.html" class="active">
+                    Elevator Pitch
+                </a>
+            </li>
 
-                <li>
-                    <a href="index.html">
-                        Bio
-                    </a>
-                </li>
+            <li>
+                <a href="portfolio.html">
+                    Portfolio
+                </a>
+            </li>
 
-                <li>
-                    <a href="elevator-pitch.html" class="active">
-                        Elevator Pitch
-                    </a>
-                </li>
+            <li>
+                <a href="research.html">
+                    Research
+                </a>
+            </li>
 
-                <li>
-                    <a href="portfolio.html">
-                        Portfolio
-                    </a>
-                </li>
+        </ul>
 
-            </ul>
+    </nav>
 
-        </nav>
-
-    </header>
-
-
-
-    <!-- =========================
-         MAIN
-    ========================= -->
-
-    <main>
+</header>
 
 
-        <section class="pitch-page">
+<main>
 
-            <div class="pitch-container">
+    <section class="hero">
 
+        <div>
 
-                <div class="section-label">
-                    02 — Presentation
-                </div>
-
-
-                <h1 class="pitch-title">
-                    Elevator <span>Pitch</span>
-                </h1>
-
-
-                <p class="pitch-subtitle">
-                    Get to know Rania beyond the portfolio.
-                </p>
-
-
-                <div class="video-frame">
-
-                    <video
-                        controls
-                        preload="metadata"
-                        playsinline
-                    >
-
-                        <source
-                            src="ElevatorPitch.mp4"
-                            type="video/mp4"
-                        >
-
-                        Your browser does not support
-                        the video element.
-
-                    </video>
-
-                </div>
-
-
-                <p class="video-caption">
-                    A brief introduction to Rania's journey,
-                    perspective, and professional aspirations.
-                </p>
-
-
+            <div class="label">
+                02 — Presentation
             </div>
 
-        </section>
-
-
-
-        <section class="next-section">
-
-            <div class="section-label">
-                Continue
-            </div>
-
-            <h2>
-                Explore Rania's work.
-            </h2>
+            <h1>
+                Elevator <span>Pitch</span>
+            </h1>
 
             <p>
-                Discover selected academic and architectural projects.
+                Get to know Rania beyond the portfolio.
             </p>
 
-            <a
-                href="portfolio.html"
-                class="next-button"
+        </div>
+
+    </section>
+
+
+    <section class="video-section">
+
+        <div class="video-container">
+
+            <video
+                controls
+                playsinline
+                preload="metadata"
             >
-                Explore Portfolio →
-            </a>
 
-        </section>
+                <source
+                    src="ElevatorPitch.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support video.
+
+            </video>
+
+        </div>
+
+        <p class="caption">
+            Rania's personal introduction and professional elevator pitch.
+        </p>
+
+    </section>
 
 
-    </main>
+    <section class="cta">
+
+        <div class="label">
+            Continue
+        </div>
+
+        <h2>
+            Explore her work.
+        </h2>
+
+        <p>
+            Discover selected architectural and academic projects.
+        </p>
+
+        <a
+            href="portfolio.html"
+            class="button"
+        >
+            Explore Portfolio →
+        </a>
+
+    </section>
+
+</main>
 
 
-
-    <footer>
-
-        © 2026 Rania Ababssi — Architecture Portfolio
-
-    </footer>
-
+<footer>
+    © 2026 Rania Ababssi — Architecture Portfolio
+</footer>
 
 </body>
-
 </html>
