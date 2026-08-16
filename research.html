@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rania Ababssi | Research</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+
+            background: #f7f5f0;
+
+            color: #292929;
+
+            line-height: 1.6;
+        }
+
+        .navbar {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 78px;
+
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 7%;
+
+            background: rgba(247,245,240,.96);
+
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid #ddd8cf;
+
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: "Playfair Display", serif;
+
+            font-size: 24px;
+
+            color: #292929;
+
+            text-decoration: none;
+
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+
+            gap: 35px;
+
+            list-style: none;
+        }
+
+        .nav-links a {
+            position: relative;
+
+            color: #444;
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            transition: .3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #8b7355;
+        }
+
+        .nav-links a::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: -7px;
+
+            width: 0;
+            height: 1px;
+
+            background: #8b7355;
+
+            transition: .3s;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        main {
+            padding-top: 78px;
+        }
+
+        .hero {
+            min-height: 52vh;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 100px 7%;
+        }
+
+        .label {
+            color: #8b7355;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(55px, 8vw, 100px);
+
+            line-height: .95;
+
+            font-weight: 500;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #8b7355;
+        }
+
+        .hero p {
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #666;
+
+            font-size: 17px;
+        }
+
+        .intro {
+            padding: 20px 9% 70px;
+
+            text-align: center;
+        }
+
+        .intro p {
+            max-width: 850px;
+
+            margin: auto;
+
+            color: #666;
+
+            line-height: 1.9;
+        }
+
+        .research {
+            max-width: 1050px;
+
+            margin: auto;
+
+            padding: 0 7% 110px;
+        }
+
+        .item {
+            display: grid;
+
+            grid-template-columns: 90px 1fr;
+
+            gap: 40px;
+
+            padding: 55px 0;
+
+            border-top: 1px solid #ddd8cf;
+        }
+
+        .number {
+            font-family: "Playfair Display", serif;
+
+            font-size: 43px;
+
+            color: #b59a76;
+        }
+
+        .type {
+            color: #8b7355;
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 12px;
+        }
+
+        .item h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(28px, 3.5vw, 42px);
+
+            line-height: 1.15;
+
+            font-weight: 500;
+
+            margin-bottom: 15px;
+        }
+
+        .doi {
+            color: #777;
+
+            font-size: 13px;
+
+            margin-bottom: 18px;
+        }
+
+        .role {
+            display: inline-block;
+
+            border: 1px solid #d6d0c7;
+
+            padding: 7px 11px;
+
+            color: #777;
+
+            font-size: 9px;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: #666;
+
+            font-size: 15px;
+
+            line-height: 1.85;
+
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 14px 24px;
+
+            background: #8b7355;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            transition: .3s;
+        }
+
+        .button:hover {
+            background: #6e5a43;
+        }
+
+        .note {
+            margin-top: 40px;
+
+            padding: 25px;
+
+            background: #ebe7df;
+
+            color: #666;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+        .back {
+            background: #252525;
+
+            text-align: center;
+
+            padding: 100px 9%;
+
+            color: white;
+        }
+
+        .back h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 55px;
+
+            font-weight: 500;
+
+            margin-bottom: 20px;
+        }
+
+        .back p {
+            color: #bbb;
+
+            margin-bottom: 30px;
+        }
+
+        .outline {
+            display: inline-block;
+
+            padding: 14px 24px;
+
+            border: 1px solid #b59a76;
+
+            color: #b59a76;
+
+            text-decoration: none;
+
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            transition: .3s;
+        }
+
+        .outline:hover {
+            background: #b59a76;
+
+            color: white;
+        }
+
+        footer {
+            background: #1c1c1c;
+
+            color: #888;
+
+            text-align: center;
+
+            padding: 30px;
+
+            font-size: 13px;
+        }
+
+        @media(max-width:800px) {
+
+            .navbar {
+                padding: 0 4%;
+            }
+
+            .logo {
+                font-size: 17px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 8px;
+                letter-spacing: .5px;
+            }
+
+            .item {
+                grid-template-columns: 1fr;
+
+                gap: 10px;
+            }
+
+            .number {
+                font-size: 35px;
+            }
+
+            .back h2 {
+                font-size: 43px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        RANIA ABABSSI
+    </a>
+
+    <nav>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Bio
+                </a>
+            </li>
+
+            <li>
+                <a href="elevator-pitch.html">
+                    Elevator Pitch
+                </a>
+            </li>
+
+            <li>
+                <a href="portfolio.html">
+                    Portfolio
+                </a>
+            </li>
+
+            <li>
+                <a href="research.html" class="active">
+                    Research
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+
+<section class="hero">
+
+    <div>
+
+        <div class="label">
+            04 — Academic Work
+        </div>
+
+        <h1>
+            Research &<br>
+            <span>Publications</span>
+        </h1>
+
+        <p>
+            Research exploring architecture, adaptive reuse,
+            sustainable materials, building performance,
+            fire safety, and evacuation simulation.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="intro">
+
+    <p>
+        Alongside architectural design, Rania has developed
+        experience in academic research, including published
+        work and collaboration as a co-author and research
+        assistant.
+    </p>
+
+</section>
+
+
+<section class="research">
+
+
+    <!-- 01 -->
+
+    <article class="item">
+
+        <div class="number">
+            01
+        </div>
+
+        <div>
+
+            <div class="type">
+                Publication · 2024
+            </div>
+
+            <h2>
+                Exploring Diverse Approaches To Adaptive Reuse
+                In Function In Yogyakarta: Comparison Of Omah
+                UGM And Restaurant Lumbung Mataram
+            </h2>
+
+            <div class="doi">
+                DOI: 10.22452/jdbe.vol19no3.2
+            </div>
+
+            <div class="role">
+                Publication
+            </div>
+
+            <p class="description">
+                Research exploring diverse approaches to adaptive
+                reuse in Yogyakarta through the comparison of
+                Omah UGM and Restaurant Lumbung Mataram.
+            </p>
+
+            <a
+                href="https://doi.org/10.22452/jdbe.vol19no3.2"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+            >
+                Read Publication →
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- 02 -->
+
+    <article class="item">
+
+        <div class="number">
+            02
+        </div>
+
+        <div>
+
+            <div class="type">
+                Publication · 2024
+            </div>
+
+            <h2>
+                Enhancing Lighting Efficiency In Kost's Rooms
+                By Utilizing Bamboo Panels
+            </h2>
+
+            <div class="doi">
+                DOI: 10.32734/ijau.v8i1.14254
+            </div>
+
+            <div class="role">
+                Publication
+            </div>
+
+            <p class="description">
+                Research examining the use of bamboo panels
+                to improve lighting efficiency in kost rooms.
+            </p>
+
+            <a
+                href="https://doi.org/10.32734/ijau.v8i1.14254"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+            >
+                Read Publication →
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- 03 -->
+
+    <article class="item">
+
+        <div class="number">
+            03
+        </div>
+
+        <div>
+
+            <div class="type">
+                Research · 2026
+            </div>
+
+            <h2>
+                Evaluating the Performance of Evacuation Routes
+                in an Academic Facility Using Pathfinder Simulation
+                and Regulatory
+            </h2>
+
+            <div class="doi">
+                DOI: 10.14710/jadu.v8i1.28897
+            </div>
+
+            <div class="role">
+                Co-author & Research Assistant
+            </div>
+
+            <p class="description">
+                Research focused on evaluating evacuation routes
+                in an academic facility using Pathfinder simulation
+                and regulatory considerations.
+            </p>
+
+            <a
+                href="https://doi.org/10.14710/jadu.v8i1.28897"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+            >
+                Read Publication →
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- 04 -->
+
+    <article class="item">
+
+        <div class="number">
+            04
+        </div>
+
+        <div>
+
+            <div class="type">
+                Research · 2026
+            </div>
+
+            <h2>
+                Analysis of Evacuation Route and Fire Safety
+                in Main Library University Building
+            </h2>
+
+            <div class="doi">
+                DOI: 10.20961/arst.v23i2.109839
+            </div>
+
+            <div class="role">
+                Co-author & Research Assistant
+            </div>
+
+            <p class="description">
+                Research analyzing evacuation routes and fire
+                safety within a main university library building.
+            </p>
+
+            <a
+                href="https://doi.org/10.20961/arst.v23i2.109839"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+            >
+                Read Publication →
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- 05 -->
+
+    <article class="item">
+
+        <div class="number">
+            05
+        </div>
+
+        <div>
+
+            <div class="type">
+                Research · 2026
+            </div>
+
+            <h2>
+                Assessing Emergency Egress on Retail Environments
+                Through Pathfinder Simulation
+            </h2>
+
+            <div class="doi">
+                DOI: 10.55606/jeei.v6i1.6707
+            </div>
+
+            <div class="role">
+                Co-author & Research Assistant
+            </div>
+
+            <p class="description">
+                Research assessing emergency egress in retail
+                environments through Pathfinder simulation.
+            </p>
+
+            <a
+                href="https://doi.org/10.55606/jeei.v6i1.6707"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+            >
+                Read Publication →
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <div class="note">
+
+        <strong>Research experience:</strong>
+        Rania's research work includes publication,
+        co-authorship, and research-assistant experience
+        across architectural design, adaptive reuse,
+        sustainable materials, evacuation analysis,
+        and fire safety.
+
+    </div>
+
+
+</section>
+
+
+<section class="back">
+
+    <div class="label">
+        Continue
+    </div>
+
+    <h2>
+        Back to Rania's profile.
+    </h2>
+
+    <p>
+        Explore her background and architectural portfolio.
+    </p>
+
+    <a
+        href="index.html"
+        class="outline"
+    >
+        ← Back to Bio
+    </a>
+
+</section>
+
+
+</main>
+
+
+<footer>
+    © 2026 Rania Ababssi — Architecture Portfolio
+</footer>
+
+</body>
+</html>
